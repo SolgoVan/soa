@@ -1,15 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <AppNavbar />
+    <main>
+      <router-view />
+    </main>
+    <footer>
+      <p>© SolgoVan 2024</p>
+    </footer>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppNavbar from './components/Navbar.vue';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components:{
+    AppNavbar,
   }
 }
 </script>
@@ -20,7 +27,12 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: white;
   margin-top: 60px;
+}
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 </style>
